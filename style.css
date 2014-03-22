@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, p, blockquote, div, span, img, table, thead, tbody, tr, th, td, ul, ol, li, code {
+html, body, h1, h2, h3, p, blockquote, div, span, img, table, thead, tbody, tr, th, td, ul, ol, li, code, fieldset, input, textarea {
 	border: none;
 	color: #000000;
 	font-family: 'Open Sans', sans-serif;
@@ -11,10 +11,15 @@ html, body, h1, h2, h3, p, blockquote, div, span, img, table, thead, tbody, tr, 
 	padding: 0;
 }
 
-div.wrapper {
+div.wrapper, div.wrapper-admin {
 	margin: auto;
 	position: relative;
 	width: 640px;
+}
+
+div.wrapper-admin {
+	margin-top: 28px;
+	margin-top: 1.75rem;
 }
 
 a {
@@ -57,7 +62,7 @@ h2 {
 	margin-top: 1.75rem;
 }
 
-h1, p, ul, ol, pre, img {
+h1, p, ul, ol, pre, img, fieldset {
 	margin-bottom: 28px;
 	margin-bottom: 1.75rem;
 }
@@ -113,9 +118,52 @@ code {
 	word-wrap: break-word;
 }
 
+input[type=text], input[type=password], textarea {
+	border: 1px solid #d0d0d0;
+	box-shadow: none;
+	font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+	font-size: 14px;
+	outline: none;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	border-color: #a0a0a0;
+}
+
+input[type=text], input[type=password] {
+	width: 200px;
+}
+
+textarea {
+	height: 500px;
+	width: 100%;
+}
+
+input[type=submit] {
+	background: #1abc9c;
+	color: #ffffff;
+	padding: 5px 10px;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+}
+
+input[type=submit]:active, input[type=submit]:focus {
+	background: #16a085;
+	box-shadow: none;
+	outline: none;
+}
+
 @media all and (max-width:660px) {
 	div.wrapper {
 		margin: 0 20px;
+		width: auto;
+	}
+
+	div.wrapper-admin {
+		margin: 28px 20px 0 20px;
+		margin: 1.75rem 20px 0 20px;
 		width: auto;
 	}
 }
