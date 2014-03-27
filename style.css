@@ -11,10 +11,24 @@ html, body, h1, h2, h3, p, blockquote, div, span, img, table, thead, tbody, tr, 
 	padding: 0;
 }
 
+div.hero {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	margin-bottom: -88px;
+	position: relative;
+	z-index: 1;
+}
+
 div.wrapper, div.wrapper-admin {
 	margin: auto;
 	position: relative;
 	width: 640px;
+	z-index: 2;
 }
 
 div.wrapper-admin {
@@ -165,5 +179,23 @@ input[type=submit]:active, input[type=submit]:focus {
 		margin: 28px 20px 0 20px;
 		margin: 1.75rem 20px 0 20px;
 		width: auto;
+	}
+}
+
+@media all and (max-height: 760px) {
+	div.hero {
+		height: 400px;
+	}
+}
+
+@media all and (max-height: 600px) {
+	div.hero {
+		height: 300px;
+	}
+}
+
+@media all and (max-height: 500px) {
+	div.hero {
+		height: 150px;
 	}
 }
